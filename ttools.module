@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks ttools
+ */
+
+/**
+ * Implements hook_help().
+ */
+
+function ttools_help($path, $arg) {
+
+  switch ($path) {
+    case 'admin/help#ttools':
+      $output = 'TwitterTools Drupal Module';
+      return $output;
+    break;
+  }
+}

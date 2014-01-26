@@ -1,0 +1,35 @@
+<div class="stream">
+  {% for tweet in stream %}
+
+    {% if tweet.retweeted %}
+        {% set user = tweet.retweeted_status.user %}
+        {% set text = tweet.retweeted_status.text %}
+      {% else %}
+        {% set user = tweet.user %}
+        {% set text = tweet.text %}
+      {% endif %}
+
+    <div class="tweet">         
+      <div class="user-profile_image">
+          <a href="http://twitter.com/{{ user.screen_name }}" target="_blank">
+            <img src="{{ user.profile_image_url }}" />
+          </a>
+      </div>
+
+      <div class="user-name-screen_name-text">
+          <div class="name">
+            <span class="name">
+              {{ user.name }}
+            </span>
+            <span class="screen_name">
+              @{{ user.screen_name }}
+            </span>
+          </div>
+          <div class="text">
+            {{ text }}
+          </div>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>

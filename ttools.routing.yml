@@ -1,0 +1,23 @@
+ttools_hello:
+  path: '/ttools/hello/{name}'
+  defaults:
+    _content: '\Drupal\ttools\Controller\DefaultController::helloAction'
+    _title: 'ttools say hello!'
+  requirements:
+    _permission: 'access content'
+
+ttools_settingsform_form:
+  path: '/ttools/settings/SettingsForm'
+  defaults:
+    _form: '\Drupal\ttools\Form\SettingsForm'
+    _title: 'ttools Form'
+  requirements:
+    _permission: 'access administration pages'
+
+ttools_hello:
+  path: '/ttools/timeline'
+  defaults:
+    _content: '\Drupal\ttools\Controller\TimelineController::timeline'
+    _title: 'This is my timeline'
+  requirements:
+    _permission: 'access content'
