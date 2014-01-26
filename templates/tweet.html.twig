@@ -1,0 +1,20 @@
+<div class="tweet">
+  <div class="user-profile_image">
+      <a href="http://twitter.com/{{ user.screen_name }}" target="_blank">
+        <img src="{{ user.profile_image_url }}" />
+      </a>
+  </div>
+  <div class="user-name-screen_name-text">
+      <div class="name">
+        <span class="name">
+          {{ user.name }}
+        </span>
+        <span class="screen_name">
+          @{{ user.screen_name }}
+        </span>
+      </div>
+      <div class="text">
+        {{ text }}
+      </div>
+  </div>
+</div>
