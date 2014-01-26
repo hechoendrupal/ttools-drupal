@@ -1,11 +1,3 @@
-ttools_hello:
-  path: '/ttools/hello/{name}'
-  defaults:
-    _content: '\Drupal\ttools\Controller\DefaultController::helloAction'
-    _title: 'ttools say hello!'
-  requirements:
-    _permission: 'access content'
-
 ttools_settingsform_form:
   path: '/ttools/settings/SettingsForm'
   defaults:
