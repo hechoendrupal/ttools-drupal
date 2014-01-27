@@ -27,7 +27,7 @@ class TimelineController extends ControllerBase implements ContainerInjectionInt
    * @return [type]       [description]
    */
   public function timeline() {
-   $configFactory = $this->config("ttools.settingsform_config");
+   $configFactory = $this->config("ttools.oauthform_config");
 
     $config = [
       "consumer_key"        => $configFactory->get("consumer_key"),
@@ -45,9 +45,9 @@ class TimelineController extends ControllerBase implements ContainerInjectionInt
 
     $template = $this->twig->loadTemplate($twigFilePath);
 
-    return $template->render(array(
+    return $template->render([
       'stream' => $stream
-    ));
+    ]);
     
   }
   
