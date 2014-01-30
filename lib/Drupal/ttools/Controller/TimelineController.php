@@ -22,9 +22,8 @@ class TimelineController extends ControllerBase implements ContainerInjectionInt
   }
   
   /**
-   * helloAction
-   * @param  string $name Get
-   * @return [type]       [description]
+   * Timeline
+   * @return string
    */
   public function timeline() {
    $configFactory = $this->config("ttools.oauthform_config");
